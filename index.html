@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Ionicons CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/css/ionicons.min.css">
+
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="player-wrapper">
+        <div class="menu-content">
+            <div class="row">
+                <ion-icon name="close" id="close"></ion-icon>
+            </div>
+            <div class="row">
+                <div class="mini-album">
+                    <img src="https://images.genius.com/a74051159decca8ebdbba7c499616e3f.1000x1000x1.jpg" id="pic">
+                </div>
+                <div class="song-info">
+                    <h>borderline</h>
+                    <p>tame impala</p>
+                </div>
+                <div class="play-wrapper">
+                    <ion-icon name="play" id="choose-play" data-song-type="song1"></ion-icon>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mini-album">
+                    <div class="overlay">
+                        <img src="https://images.genius.com/3635fcea8f4dd0c2dfe81de0774f1b37.1000x1000x1.png" id="pic">
+                    </div>
+                </div>
+                <div class="song-info">
+                    <h>dark age</h>
+                    <p>mgmt</p>
+                </div>
+                <div class="play-wrapper">
+                    <ion-icon name="play" id="choose-play" data-song-type="song2"></ion-icon>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mini-album">
+                    <img src="https://images.genius.com/179c178e2314fff9609b47dad5b9d8c8.1000x1000x1.jpg" id="pic">
+                </div>
+                <div class="song-info">
+                    <h>often - kygo remix</h>
+                    <p>the weeknd</p>
+                </div>
+                <div class="play-wrapper">
+                    <ion-icon name="play" id="choose-play" data-song-type="song3"></ion-icon>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mini-album">
+                    <img src="https://images.genius.com/1b4158cead8b9efc973a164d9e86a821.1000x1000x1.jpg" id="pic">
+                </div>
+                <div class="song-info">
+                    <h>peaches</h>
+                    <p>justin bieber</p>
+                </div>
+                <div class="play-wrapper">
+                    <ion-icon name="play" id="choose-play" data-song-type="song4"></ion-icon>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mini-album">
+                    <img src="https://images.genius.com/3303d611d52808e90819e5b10166e308.750x750x1.png" id="pic">
+                </div>
+                <div class="song-info">
+                    <h>ocean drive</h>
+                    <p>duke dumont</p>
+                </div>
+                <div class="play-wrapper">
+                    <ion-icon name="play" id="choose-play" data-song-type="song5"></ion-icon>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mini-album">
+                    <img src="https://images.genius.com/88698abae0a5e564f8a827202397736e.1000x1000x1.png" id="pic">
+                </div>
+                <div class="song-info">
+                    <h>midnight sky</h>
+                    <p>miley cyrus</p>
+                </div>
+                <div class="play-wrapper">
+                    <ion-icon name="play" id="choose-play" data-song-type="song6"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="album">
+            <header>
+                <ion-icon name="menu" id="menu"></ion-icon>
+            </header>
+        </div>
+        <div class="controls">
+            <ion-icon name="play-skip-back" id="prev"></ion-icon>
+            <ion-icon name="play-circle" id="play"></ion-icon>
+            <ion-icon name="pause" id="pause"></ion-icon>
+            <ion-icon name="play-skip-forward" id="next"></ion-icon>
+        </div>
+        <h id="h"></h>
+        <p id="p"></p>
+        <div class="progress">
+            <div id="progress-bar"></div>
+        </div>
+        <audio id="audio">
+            <source src="" type="audio/mpeg">
+        </audio>
+    </div>
+
+  
+
+    <script src="script.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+</body>
+
+</html>

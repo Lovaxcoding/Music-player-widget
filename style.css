@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+:root {
+    --icon-color: #C0C0C0;
+    --h-color: #5b5255;
+    --p-color: #a7a4a4l;
+    --cubic-bezier: 1s cubic-bezier(0.4, 0, 0.2, 1);
+    --bg: #C0C0C0;
+    --player-bg: #fcfbfb;
+
+    --bg1: hsl(1deg 99% 28%);
+    --bg2: hsl(50deg 43% 42%);
+    --bg3: hsl(358deg 62% 23%);
+    --bg4: hsl(180deg 75% 30%);
+    --bg5: hsl(237deg 41% 42%);
+    --bg6: hsl(334deg 81% 35%);
+
+    --box-shadow1: 20px 20px 60px #6b0301,
+        -20px -20px 60px #910301;
+    --box-shadow2: 20px 20px 60px #695f2a,
+        -20px -20px 60px #8f8138;
+    --box-shadow3: 0px 20px 60px #421012,
+        -20px -20px 60px #5a1618;
+    --box-shadow4: 20px 20px 60px #106060,
+        -20px -20px 60px #168282;
+    --box-shadow5: 20px 20px 60px #36396f,
+        -20px -20px 60px #4a4d96;
+    --box-shadow6: 20px 20px 60px #7e1542,
+        -20px -20px 60px #aa1d5a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    font-family: 'Oxygen', sans-serif;
+    transition: background-color var(--cubic-bezier);
+    user-select: none;
+}
+
+h,
+p,
+h1,
+p1 {
+    transform: var(--cubic-bezier);
+    padding: 0;
+    margin: 0;
+}
+
+h {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--h-color);
+}
+
+p {
+    font-weight: 0.8em;
+    color: var(--p-color);
+}
+
+ion-icon {
+    color: var(--icon-color);
+    font-size: 1.5em;
+    margin: 5px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+ion-icon:hover {
+    border-radius: 50%;
+    color: grey;
+}
+
+.player-wrapper {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--player-bg);
+}
+
+.menu-content {
+    height: 300px;
+    width: 0px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    transition: width var(--cubic-bezier);
+}
+
+.row {
+    display: flex;
+    visibility: visible;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 80px;
+    width: 100%;
+    background: var(--player-bg);
+    border-bottom: 1px solid lightgrey;
+    transition: 1s;
+}
+
+.row:nth-child(1) {
+    min-height: 40px;
+    border-bottom: none;
+}
+
+.row:nth-child(1):hover {
+    background: var(--player-bg);
+}
+
+.row:hover {
+    background: var(--bg);
+}
+
+.mini-album,
+#pic {
+    height: 70px;
+    width: 70px;
+    border-radius: 15%;
+}
+
+#pic {
+    margin: 5px 0px 5px 15px;
+    transition: 1s;
+}
+
+#close {
+    font-size: 1.3em;
+    padding: 10px;
+    color: black;
+}
+
+.song-info {
+    margin-top: 10px;
+    height: 70%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.play-wrapper {
+    height: 50%;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.song-info h,
+.song-info p {
+    font-size: 0.9em;
+}
+
+#choose-play {
+    transition: .4s;
+    padding: 5px;
+}
+
+#choose-play:hover {
+    background: lightgrey;
+    padding: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: #555;
+}
+
+.album {
+    height: 450px;
+    width: 300px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 15px 0px 0px;
+    transition: background-image var(--cubic-bezier);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.controls {
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.progress {
+    width: 70%;
+    height: 10px;
+    border-radius: 15px;
+    background: lightgrey;
+    margin: 10px 0px 20px 0px;
+}
+
+#progress-bar {
+    border-radius: 15px;
+    background: red;
+    height: 100%;
+    width: 0%;
+    transition: background-color var(--cubic-bezier);
+    animation: line 5s linear infinite;
+}
+
+@keyframes line {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .player-wrapper,
+    .menu-content {
+        height: 500px;
+    }
+}
